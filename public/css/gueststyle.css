@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    padding: 1rem;
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: uppercase;
+}
+
+.top .left{
+    display: flex;
+    align-items: center;
+}
+
+.top .title{
+    margin-left: 0 0 0 0.5rem;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Lora', serif;
+    align-items: center;
+}
+
+.top .title .name{
+    font-weight: 400;
+    text-align: center;
+}
+
+.top .title .info{
+    font-weight: 400;
+    font-size: 8px;
+}
+
+.top .right img{
+    width: 30px;
+}
+
+.top img{
+    width: 5rem;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section h2{
+    font-family: 'Lora', serif;
+    text-transform: uppercase;
+    padding: 1rem;
+}
+
+section p{
+    font-family: 'poppins';
+    font-size: 12px;
+}
+
+section a{
+    color: brown;
+    text-decoration: none;
+}
+
+section .gif img{
+    width: 300px;
+}
+
+.king{
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+    font-family: 'poppins';
+}
+
+.king span{
+    font-family: 'Lora', serif;
+}
