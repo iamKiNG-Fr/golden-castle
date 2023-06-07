@@ -5,7 +5,6 @@
 }
 
 body{
-    padding: 1rem;
     display: flex;
     height: 100vh;
     width: 100%;
@@ -23,6 +22,7 @@ body{
 .nav .left{
     display: flex;
     align-items: center;
+    margin-block: 0.5rem;
 }
 
 .nav .title{
@@ -43,6 +43,10 @@ body{
     font-size: 8px;
 }
 
+.nav .right{
+    margin-right: 1rem;
+}
+
 .nav .right img{
     width: 30px;
 }
@@ -55,7 +59,7 @@ section{
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100%;
+    height: auto;
 }
 
 section h2{
@@ -73,13 +77,16 @@ section a{
     text-decoration: none;
 }
 
+/* hero */
+
 section .hero{
     width: 100%;
-    min-height: 80%;
+    min-height: 70vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: bisque;
 }
 
 section .hero .herotitle{
@@ -93,6 +100,7 @@ section .hero .herotitle h1{
     text-transform: uppercase;
     font-size: 4rem;
     font-weight: 400;
+    text-align: center;
 }
 
 section .hero .herotitle h3{
@@ -100,21 +108,157 @@ section .hero .herotitle h3{
     text-transform: uppercase;
     font-size: 1.2rem;
     font-weight: 400;
+    text-align: center;
 }
 
 section .hero .brief{
     margin-top: 2rem;
-    width: 40%;
+    max-width: 40rem;
     font-size: 0.9rem;
     text-align: center;
     line-height: 2;
 }
 
+/* service & plus */
+
+.services{
+    width: 100%;
+    padding-bottom: 2rem;
+}
+
+.services h3{
+    margin-top: 2rem;
+    font-family: 'Lora', serif;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.services .info{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.services .info .card{
+    width: 24rem;
+    height: 35rem;
+    margin-top: 2rem;
+    background-color: bisque;
+}
+
+/* plus */
+
+.plus{
+    width: 100%;
+    background-color: aquamarine;
+    padding-bottom: 2rem;
+}
+
+.plus h3{
+    margin-top: 2rem;
+    font-family: 'Lora', serif;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.plus .info{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.plus .info .card{
+    width: 20rem;
+    height: 20rem;
+    margin-top: 2rem;
+    background-color: bisque;
+}
+
+/* about */
+
+.about{
+    width: 100%;
+    display: flex;
+    padding-block: 2rem;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.about .left{
+    width: 31rem;
+}
+
+.about .left img{
+    height: 30rem;
+    width: 100%;
+}
+
+.about .left h2{
+    width: 20rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    padding: 0;
+    font-family:  'Lora', serif;
+    font-size: 1.6rem;
+    font-style: italic;
+    text-transform: capitalize;
+    text-rendering: optimizeLegibility;
+}
+
+.about .left p{
+    
+    line-height: 2;
+    font-family: 'poppins', Helvetica, sans-serif;
+    font-weight: 200;
+    font-size: 16px;
+    letter-spacing: 0.04rem;
+    text-rendering: optimizeLegibility;
+}
+
+
+.about .right{
+    width: 31rem;
+}
+
+.about .right img{
+    height: 30rem;
+    width: 100%;
+}
+
+.about .right h2{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    padding: 0;
+    font-family:  'Lora', serif;
+    font-size: 1.6rem;
+    font-style: italic;
+    text-transform: capitalize;
+    text-rendering: optimizeLegibility;
+}
+
+.about .right p{
+    margin-bottom: 2rem;
+    line-height: 2;
+    font-weight: 300;
+    font-size: 16px;
+    font-family: 'poppins', Helvetica, sans-serif;
+    text-rendering: optimizeLegibility;
+}
+
+
+/* footer */
+
 .king{
     display: flex;
     justify-content: center;
     font-size: 12px;
-    font-family: 'poppins';
+    font-family: 'poppins', Helvetica,sans-serif;
 }
 
 .king span{
