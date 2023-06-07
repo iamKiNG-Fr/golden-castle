@@ -13,19 +13,19 @@ body{
     justify-content: space-between;
 }
 
-.top{
+.nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
     text-transform: uppercase;
 }
 
-.top .left{
+.nav .left{
     display: flex;
     align-items: center;
 }
 
-.top .title{
+.nav .title{
     margin-left: 0 0 0 0.5rem;
     display: flex;
     flex-direction: column;
@@ -33,21 +33,21 @@ body{
     align-items: center;
 }
 
-.top .title .name{
+.nav .title .name{
     font-weight: 400;
     text-align: center;
 }
 
-.top .title .info{
+.nav .title .info{
     font-weight: 400;
     font-size: 8px;
 }
 
-.top .right img{
+.nav .right img{
     width: 30px;
 }
 
-.top img{
+.nav img{
     width: 5rem;
 }
 
