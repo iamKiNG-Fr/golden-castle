@@ -17,6 +17,16 @@ body{
     align-items: center;
     justify-content: space-between;
     text-transform: uppercase;
+    position: fixed;
+    width: 100%;
+    z-index: 30;
+    background-color: rgba(255, 255, 255, 0.946);
+    backdrop-filter: blur(8px);
+}
+
+.nav a{
+    text-decoration: none;
+    color: black;
 }
 
 .nav .left{
@@ -80,13 +90,29 @@ section a{
 /* hero */
 
 section .hero{
+    color: white;
     width: 100%;
-    min-height: 70vh;
+    margin-top: 3rem;
+    min-height: 75vh;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: bisque;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+    background-position: center bottom;
+    padding: 1rem;
+    z-index: 10;
+    /* backdrop-filter: blur(2px); */
+}
+
+#bgvid {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* height: 30rem; */
+    z-index: 5;
 }
 
 section .hero .herotitle{
@@ -125,6 +151,9 @@ section .hero .brief{
 .services{
     width: 100%;
     padding-bottom: 2rem;
+    /* background: url("/img/topography.svg"); */
+    background-color: #fff;
+    z-index: 20;
 }
 
 .services h3{
@@ -147,6 +176,22 @@ section .hero .brief{
     height: 35rem;
     margin-top: 2rem;
     background-color: bisque;
+}
+
+.services .event{
+    background-image: url("/img/event4.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.services .wed{
+    background-image: url("/img/wed2.jpg");
+    background-size: cover;
+}
+
+.services .tv{
+    background-image: url("/img/tv3.jpg");
+    background-size: cover;
 }
 
 /* plus */
@@ -177,8 +222,13 @@ section .hero .brief{
     height: 20rem;
     margin-top: 2rem;
     background-color: bisque;
+    font-family: 'Lora', serif;
+
 }
 
+.plus .info .card img{
+    width: 2rem;
+}
 /* about */
 
 .about{
@@ -194,7 +244,9 @@ section .hero .brief{
     width: 31rem;
 }
 
-.about .left img{
+.about .left .img{
+    background-image: url("/img/wed7.jpg");
+    background-size: cover;
     height: 30rem;
     width: 100%;
 }
@@ -227,7 +279,9 @@ section .hero .brief{
     width: 31rem;
 }
 
-.about .right img{
+.about .right .img{
+    background-image: url("/img/hero1.jpg");
+    background-size: cover;
     height: 30rem;
     width: 100%;
 }
@@ -296,12 +350,109 @@ section .hero .brief{
 
 /* footer */
 
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-block: 2rem;
+    padding-inline: 4rem;
+}
+
+footer .left{
+    width: 25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'poppins', sans-serif;
+    font-size: 0.8rem;
+    margin-bottom: 2rem;
+}
+
+footer .left .title{
+    font-family: 'Lora', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+footer .left .info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+footer .left .info p{
+    text-align: center;
+}
+
+footer .left .info a{
+    color: brown;
+    margin-top: 0.5rem;
+    letter-spacing: 0.04rem;
+    text-decoration: none;
+}
+
+footer .center{
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+
+footer .center h3{
+    font-family: 'Lora', serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    letter-spacing: 0.05;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+footer .center h4{
+    font-size: 0.7rem;
+    font-family: 'Lora', serif;
+    font-weight: 400;
+    letter-spacing: 0.05;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+footer .center img{
+    width: 10rem;
+}
+
+footer .right{
+    width: 25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer .right .title{
+    font-family: 'Lora', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+footer .right a{
+    color: black;
+}
+
 .king{
     display: flex;
     justify-content: center;
     font-size: 12px;
     font-family: 'poppins', Helvetica,sans-serif;
-    
+    background-color: bisque;
 }
 
 .king span{
