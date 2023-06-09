@@ -1,3 +1,16 @@
+:root {
+    --gold: #E6A90B;
+    --light-gold: #ffd700;
+    --grey-black: linear-gradient(156deg, rgba(33,33,33,1) 0%, rgb(50, 50, 50) 90%, rgb(26, 26, 26) 100%);
+    --black:  rgba(33, 33, 33, 0.741);
+    --white: #ffffff;
+    --glow-gold: linear-gradient(90deg, rgba(230,169,11,1) 0%, rgba(255,215,0,1) 51%, rgba(230,169,11,1) 100%);
+}
+  
+.ft-gold{
+    color: var(--light-gold);
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -19,7 +32,7 @@ body{
     text-transform: uppercase;
     position: fixed;
     width: 100%;
-    z-index: 30;
+    z-index: 60;
     background-color: rgba(255, 255, 255, 0.946);
     backdrop-filter: blur(8px);
 }
@@ -83,7 +96,6 @@ section p{
 }
 
 section a{
-    color: brown;
     text-decoration: none;
 }
 
@@ -152,17 +164,26 @@ section .hero .brief{
     width: 100%;
     padding-bottom: 2rem;
     /* background: url("/img/topography.svg"); */
+    border-top: solid 5px var(--grey-black);
     background-color: #fff;
     z-index: 20;
 }
 
-.services h3{
+.services .text{
+    display: flex;
+    width: 100%;
+    justify-content: center;   
     margin-top: 2rem;
+}
+
+
+.services .text h3{
+    padding: 0.3rem;
+    background-color: var(--gold);
     font-family: 'Lora', serif;
     text-transform: uppercase;
     font-size: 1.2rem;
-    font-weight: 400;
-    text-align: center;
+    font-weight: 600;
 }
 
 .services .info{
@@ -176,58 +197,122 @@ section .hero .brief{
     height: 35rem;
     margin-top: 2rem;
     background-color: bisque;
+    border: solid 5px var(--black);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.services .info .card .desc{
+    padding: 1rem;
+}
+
+.services .info .card .desc h4{
+    font-family: 'Lora', serif;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    color: var(--light-gold);
+    margin-bottom: 1rem;
+    font-weight: 300;
+}
+
+.services .info .card .desc p{
+    color: #fff;
+    font-size: 12px;
+    line-height: 2;
+    word-spacing: 0.04rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+.services .info .card .desc a{
+    color: black;
+    padding: 0.3rem;
+    background: #fff;
+    transition: 150ms ease-in;
+    text-transform: uppercase;
+    font-family: 'poppins', Helvetica, sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.services .info .card .desc a:hover{
+    background: var(--gold);
+    cursor: pointer;
 }
 
 .services .event{
-    background-image: url("/img/event4.jpg");
+    background-image: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(59,59,59,0.7120098039215687) 62%, rgba(0,0,0,0.8604691876750701) 100%), url("/img/event4.jpg");
     background-size: cover;
     background-position: center;
 }
 
 .services .wed{
-    background-image: url("/img/wed2.jpg");
+    background-image:linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(59,59,59,0.7120098039215687) 62%, rgba(0,0,0,0.8604691876750701) 100%), url("/img/wed2.jpg");
     background-size: cover;
 }
 
 .services .tv{
-    background-image: url("/img/tv3.jpg");
+    background-image: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(59,59,59,0.7120098039215687) 62%, rgba(0,0,0,0.8604691876750701) 100%), url("/img/tv3.jpg");
     background-size: cover;
 }
 
 /* plus */
 
 .plus{
+    display: flex;
+    position: relative;
+    flex-direction: column;
     width: 100%;
-    background-color: brown;
-    padding-bottom: 2rem;
+    background: var(--grey-black);
+    height: auto;
+    z-index: 30;
+    border-block: solid 5px var(--light-gold);
 }
 
-.plus h3{
-    margin-top: 2rem;
+.plus .text{
+    display: flex;
+    align-self: center;   
+    position: absolute;
+    margin-top: -15px;
+}
+
+.plus .text h3{
+    padding: 0.3rem;
+    background-color: var(--gold);
     font-family: 'Lora', serif;
     text-transform: uppercase;
     font-size: 1.2rem;
-    font-weight: 400;
-    text-align: center;
+    font-weight: 600;
 }
 
 .plus .info{
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .plus .info .card{
-    width: 20rem;
-    height: 20rem;
-    margin-top: 2rem;
-    background-color: bisque;
+    width: 10rem;
+    height: 7rem;
+    margin-block: 2rem;
+    color: var(--light-gold);
     font-family: 'Lora', serif;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .plus .info .card img{
-    width: 2rem;
+    width: 5rem;
+}
+
+.plus .info .card p{
+    font-family: 'Lora', serif;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding-top: 1rem;
 }
 /* about */
 
@@ -249,6 +334,7 @@ section .hero .brief{
     background-size: cover;
     height: 30rem;
     width: 100%;
+    /* border: solid 5px var(--black); */
 }
 
 .about .left h2{
@@ -284,6 +370,7 @@ section .hero .brief{
     background-size: cover;
     height: 30rem;
     width: 100%;
+    /* border: solid 5px var(--black); */
 }
 
 .about .right h2{
@@ -315,15 +402,20 @@ section .hero .brief{
     width: 100%;
     height: 20rem;
     display: flex;
+    padding: 1rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: bisque;
+    background-color: rgb(42, 42, 42) ;
+    background-image: url("/img/moroccan.svg");
+    color: #fff;
+    border-block: solid 10px var(--gold)
 }
 
 .cta p{
     font-size: 1.5rem;
     max-width: 50rem;
+    font: 700;
     font-family: 'Lora', serif;;
     text-align: center;
     text-rendering: optimizeLegibility;
@@ -332,11 +424,11 @@ section .hero .brief{
 }
 
 .cta a{
-    color: white;
-    background-color: brown;
+    color: var(--black);
+    background-color: var(--light-gold);
     padding: 1rem;
     font-size: 1.2rem;
-    font-weight: 500;
+    font-weight: 700;
     font-family: 'poppins', Helvetica, sans-serif;
     text-transform: uppercase;
     margin-top: 1rem;
@@ -344,7 +436,8 @@ section .hero .brief{
 }
 
 .cta a:hover{
-    background-color: rgb(228, 60, 60);
+    background-color: var(--gold);
+    cursor: pointer;
 }
 
 
@@ -391,7 +484,7 @@ footer .left .info p{
 }
 
 footer .left .info a{
-    color: brown;
+    color: black;
     margin-top: 0.5rem;
     letter-spacing: 0.04rem;
     text-decoration: none;
@@ -452,9 +545,41 @@ footer .right a{
     justify-content: center;
     font-size: 12px;
     font-family: 'poppins', Helvetica,sans-serif;
-    background-color: bisque;
+    background: var(--grey-black);
+    color: var(--gold);
+    padding-block: 0.3rem;
 }
 
 .king span{
     font-family: 'Lora', serif;
+}
+
+.king div a{
+    color: var(--gold);
+    text-decoration: none;
+}
+
+/* responsive */
+@media only screen and (max-width: 600px) {
+    #bgvid {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+    }
+    
+    .plus .info .card img{
+        width: 2rem;
+    }
+    .plus .info .card{
+        margin-block: 1rem;
+    }
+    .plus .info .card p{
+        font-size: 0.9rem;
+        font-weight: 400;
+        padding-top: 0.5rem;
+    }
 }
