@@ -14,6 +14,13 @@
     
 </head>
 <body>
+    <div id="preloader">
+        <div class="pregif">
+            <span>
+               GOLDEN CASTLE  EVENTS + tv
+            </span>
+        </div>
+    </div>
     <div class="nav">
         <a href="/">
             <div class="left">
@@ -38,18 +45,20 @@
         </video>
         <div class="hero">
     
-                <div class="herotitle">
-                    <h1>golden castle</h1>
-                    <h3>weddings, event planning, tv & plus</h3>
-                </div> 
-                <div class="brief">
-                    <p>When it comes to creating a truly remarkable event,  you 
-                        deserve the expertise and dedication of Golden Castle 
-                        Events. As an event planning company specializing in 
-                        weddings, events, and TV production, we are passionate 
-                        about bringing your vision to life.</p>
-                </div>
-        
+            <div class="herotitle">
+                <h1>golden castle</h1>
+                <h3>weddings, event planning, tv & more</h3>
+            </div> 
+            <!-- <div class="brief">
+                <p> As an event planning company specializing in 
+                    weddings, events, and TV production, we are passionate 
+                    about bringing your vision to life.
+                </p>
+                 When it comes to creating a truly remarkable event,  you 
+                    deserve the expertise and dedication of Golden Castle 
+                    Events. 
+            </div>-->
+
         </div>
         <div class="services">
             <div class="text"><h3>services</h3></div>
@@ -101,25 +110,29 @@
         <div class="about">
             <div class="left">
                 <div class="img"></div>
-                <h2>Our commitment to excellence,</h2>
-                <p> attention 
-                    to detail, and personalized service sets 
-                    us apart. Trust Golden Castle Events to 
-                    make your dreams a reality and create an 
-                    unforgettable experience that will be 
-                    cherished for a lifetime.</p>
+                <div class="text">
+                    <h2>Our commitment to excellence,</h2>
+                    <p> attention 
+                        to detail, and personalized service sets 
+                        us apart. Trust Golden Castle Events to 
+                        make your dreams a reality and create an 
+                        unforgettable experience that will be 
+                        cherished for a lifetime.</p>
+                </div>
             </div>
             <div class="right">
-                <h2>Imagine a wedding</h2>
-                <p> that feels like a 
-                    fairytale, an event that leaves a lasting 
-                    impression, or a TV production that 
-                    captivates audiences. With our team 
-                    of experienced professionals, we take 
-                    care of every detail, from venue selection 
-                    to decor, catering, and entertainment, 
-                    ensuring that your event surpasses all 
-                    expectations.</p>
+                <div class="text">
+                    <h2>Imagine a wedding</h2>
+                    <p> that feels like a 
+                        fairytale, an event that leaves a lasting 
+                        impression, or a TV production that 
+                        captivates audiences. With our team 
+                        of experienced professionals, we take 
+                        care of every detail, from venue selection 
+                        to decor, catering, and entertainment, 
+                        ensuring that your event surpasses all 
+                        expectations.</p>
+                </div>
                 <div class="img"></div>
             </div>
         </div>
@@ -157,5 +170,11 @@
             crafted by <a href="mailto:k=heyking.fr@gmail.com"><span>ROYALTY</span> </a> 
         </div>
     </div>
+    <script>
+        const loader = document.querySelector('#preloader')
+        window.addEventListener("load", ()=>{
+            loader.style.display="none"
+        })
+    </script>
 </body>
 </html>

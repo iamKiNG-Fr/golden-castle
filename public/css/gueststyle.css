@@ -11,6 +11,47 @@
     color: var(--light-gold);
 }
 
+#preloader{
+    background: url('/img/topography.svg');
+    background-color: #fff;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 99999998;
+    background-size: 20%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    color: #003464;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.pregif{
+    background: url('/img/infinity.gif') no-repeat center center;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 999999999;
+    background-size: 20%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    color: #003464;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+#preloader span{
+    padding: 0.2rem 1rem;
+    background: var(--glow-gold);
+    margin-bottom: 5rem;
+    color: black;
+}
+
+
 *{
     margin: 0;
     padding: 0;
@@ -105,13 +146,13 @@ section .hero{
     color: white;
     width: 100%;
     margin-top: 3rem;
-    min-height: 75vh;
+    min-height: 70vh;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
     background-position: center bottom;
     padding: 1rem;
     z-index: 10;
@@ -120,11 +161,13 @@ section .hero{
 
 #bgvid {
     position: absolute;
-    left: 0;
     top: 0;
+    left: 0;
     width: 100%;
-    /* height: 30rem; */
+    height: 100%;
+    display: block;
     z-index: 5;
+    object-fit: cover;
 }
 
 section .hero .herotitle{
@@ -139,6 +182,7 @@ section .hero .herotitle h1{
     font-size: 4rem;
     font-weight: 400;
     text-align: center;
+    color: var(--light-gold);
 }
 
 section .hero .herotitle h3{
@@ -147,6 +191,9 @@ section .hero .herotitle h3{
     font-size: 1.2rem;
     font-weight: 400;
     text-align: center;
+    background: var(--glow-gold);
+    color: black;
+    padding: 0.2rem 0.5rem;
 }
 
 section .hero .brief{
@@ -156,6 +203,7 @@ section .hero .brief{
     text-align: center;
     line-height: 2;
     letter-spacing: 0.04rem;
+    
 }
 
 /* service & plus */
@@ -163,7 +211,7 @@ section .hero .brief{
 .services{
     width: 100%;
     padding-bottom: 2rem;
-    /* background: url("/img/topography.svg"); */
+    background: url("/img/topography.svg");
     border-top: solid 5px var(--grey-black);
     background-color: #fff;
     z-index: 20;
@@ -179,11 +227,12 @@ section .hero .brief{
 
 .services .text h3{
     padding: 0.3rem;
-    background-color: var(--gold);
+    background: var(--glow-gold);
     font-family: 'Lora', serif;
     text-transform: uppercase;
     font-size: 1.2rem;
     font-weight: 600;
+    
 }
 
 .services .info{
@@ -323,10 +372,12 @@ section .hero .brief{
     flex-wrap: wrap;
     justify-content: space-evenly;
     padding-inline: 10px;
+    background: url('/img/topography.svg');
 }
 
 .about .left{
     width: 31rem;
+    margin-bottom: 1rem;
 }
 
 .about .left .img{
@@ -334,12 +385,13 @@ section .hero .brief{
     background-size: cover;
     height: 30rem;
     width: 100%;
+    margin-bottom: 1rem;
     /* border: solid 5px var(--black); */
 }
 
 .about .left h2{
     width: 20rem;
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
     margin-bottom: 1rem;
     font-weight: 600;
     padding: 0;
@@ -360,6 +412,12 @@ section .hero .brief{
     text-rendering: optimizeLegibility;
 }
 
+.about .text{
+    background-color: #fff;
+    padding: 0.5rem;
+    border: solid 3px var(--light-gold);
+}
+
 
 .about .right{
     width: 31rem;
@@ -370,11 +428,12 @@ section .hero .brief{
     background-size: cover;
     height: 30rem;
     width: 100%;
+    margin-top: 1rem;
     /* border: solid 5px var(--black); */
 }
 
 .about .right h2{
-    margin-top: 2rem;
+    /* margin-top: 1rem; */
     margin-bottom: 1rem;
     font-weight: 600;
     padding: 0;
@@ -386,8 +445,6 @@ section .hero .brief{
 }
 
 .about .right p{
-    
-    margin-bottom: 2rem;
     line-height: 2;
     font-weight: 300;
     font-size: 16px;
