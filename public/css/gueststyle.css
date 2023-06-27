@@ -68,6 +68,7 @@ body{
     overflow-x: hidden;
     width: 100%;
     display: flex;
+    position: relative;
     flex-direction: column;
     perspective: 10px;
     -ms-overflow-style: none;  /* IE and Edge */
@@ -134,7 +135,7 @@ body{
     font-size: 15px;
     font-weight: 300;
     text-align: center;
-    color: black;
+    color: rgb(185, 185, 185);
     margin-top: 3rem;
     letter-spacing: 0.8rem;
     /* transform: translateZ(-4px) scale(1.4); */
@@ -157,7 +158,7 @@ body{
 
 .nav a{
     text-decoration: none;
-    color: black;
+    color: rgb(180, 180, 180);
 }
 
 .nav .left{
@@ -220,12 +221,14 @@ section a{
 /* brief */
 
 section .brief{
-    background: var(--glow-gold);
+    background: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), url('/img/brief.png');
     width: 100%;
     display: flex;
     justify-content: center;
-    padding-block: 5rem;
+    padding: 5rem 1rem;
     z-index: 20;
+    background-size: cover;
+    color: #fff;
 }
 
 section .brief .content{
@@ -274,13 +277,24 @@ section .brief .content p{
     background-color: #fff;
     z-index: 20;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
     padding-top: 3rem;
     z-index: 1;
 }
 
-
+.services .img{
+    width: 25rem;
+    border-top-left-radius: 3rem;
+    border-bottom-right-radius: 5rem;
+    background-image: url('/img/event4.jpg');
+    height: 35rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    align-self: flex-end;
+    margin-left: 5rem;
+}
 
 .services h3{
     padding: 1rem;
@@ -295,14 +309,12 @@ section .brief .content p{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    flex-wrap: wrap;
     justify-self: center;
-    width: 75%;
+    max-width: 38rem;
 }
 
 .services .info .card{
     /* margin-top: 2rem; */
-    width: 65%;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -329,38 +341,6 @@ section .brief .content p{
     word-spacing: 0.04rem;
     font-weight: 300;
     margin-bottom: 1rem;
-}
-
-/* .services .info .card .desc a{
-    color: black;
-    padding: 0.3rem;
-    background: #fff;
-    transition: 150ms ease-in;
-    text-transform: uppercase;
-    font-family: 'poppins', Helvetica, sans-serif;
-    font-size: 0.8rem;
-    font-weight: 600;
-} */
-
-.services .info .card .desc a:hover{
-    background: var(--gold);
-    cursor: pointer;
-}
-
-.services .event{
-    /* background-image: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(59,59,59,0.7120098039215687) 62%, rgba(0,0,0,0.8604691876750701) 100%), url("/img/event4.jpg");
-    background-size: cover;
-    background-position: center; */
-}
-
-.services .wed{
-    /* background-image:linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(59,59,59,0.7120098039215687) 62%, rgba(0,0,0,0.8604691876750701) 100%), url("/img/wed2.jpg");
-    background-size: cover; */
-}
-
-.services .tv{
-    /* background-image: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(59,59,59,0.7120098039215687) 62%, rgba(0,0,0,0.8604691876750701) 100%), url("/img/tv3.jpg");
-    background-size: cover; */
 }
 
 /* plus */
@@ -530,9 +510,9 @@ section .brief .content p{
 
 .cta{
     width: 100%;
-    height: 20rem;
+    height: auto;
     display: flex;
-    padding: 1rem;
+    padding: 2.5rem 1rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -617,6 +597,7 @@ footer .left .info a, footer .left .info p{
     text-decoration: none;
     font-weight: 300;
     word-spacing: 0.1rem;
+    text-align: center;
 }
 
 footer .center{
@@ -696,15 +677,25 @@ footer .right a{
 
 /* responsive */
 @media only screen and (max-width: 600px) {
-    #bgvid {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        display: block;
-        object-fit: cover;
+    .hero .herotitle h2{
+        font-size: 2.5rem;
+        font-weight: 400;
+        text-align: center;
+        color: #ffffff;
     }
+    
+    .hero .herotitle h3{
+        font-family: 'poppins', Helvetica, sans-serif;
+        text-transform: uppercase;
+        font-size: 15px;
+        font-weight: 300;
+        text-align: center;
+        color: rgb(185, 185, 185);
+        margin-top: 7rem;
+        letter-spacing: 0.8rem;
+        /* transform: translateZ(-4px) scale(1.4); */
+    }
+    
     
     .plus .info .card img{
         width: 2rem;
@@ -717,4 +708,81 @@ footer .right a{
         font-weight: 400;
         padding-top: 0.5rem;
     }
+    .services{
+        flex-direction: column;
+    }
+    .services .info{
+        text-align: center;
+    }
+    .services .img{
+        width: 20rem;
+        border-top-left-radius: 3rem;
+        border-bottom-right-radius: 5rem;
+        height: 30rem;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        align-self:center;
+        margin-left: 0rem;
+        margin-top: 2rem;
+    }
+    
+    .about .left{
+        flex-direction: column;
+    }
+    
+    .about .left img{
+        width: 20rem;
+    }
+    
+    .about .left .text{
+        max-width: 20rem;
+    }
+    
+    .about .left h2{
+        margin-left:0 ;
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    .about .left p{
+        font-size: 15px;
+        margin-left: 0;
+        text-align: center;
+    }
+    .about .right{
+        flex-direction: column-reverse;
+    }
+    
+    .about .right img{
+        width: 20rem;
+        margin-bottom: 1rem;
+    }
+    
+    .about .right .text{
+        max-width: 20rem;
+    }
+    
+    .about .right h2{
+        margin-left:0 ;
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    .about .right p{
+        font-size: 15px;
+        margin-right: 0;
+        text-align: center;
+    }
+    footer .left .info{
+       width: 25rem;
+    }
+    footer .left .info a, footer .left .info p{
+        font-size: 15px;
+        letter-spacing: 0.04rem;
+        text-decoration: none;
+        font-weight: 300;
+        word-spacing: 0.08rem;
+    }
+  
 }
