@@ -15,7 +15,7 @@ const { sequelize} = require('./sequelize/models')
 
 const connectDb = async () => {
     await sequelize.authenticate()
-    await sequelize.syns()
+    await sequelize.sync()
 }
 
 //Routers location
