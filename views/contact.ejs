@@ -14,14 +14,21 @@
             <h3>let's chat</h3>
             <p>Thank you for your interest in Golden Castle Events! We are excited to learn more about your event, production, catering needs or any enquiry you might have. Please complete the contact form below and we'll be in touch.</p>
         </div>
-        <form action="" method="post">
+        <form action="/users" method="POST">
+            <% if (errors.length > 0){ %>
+                <% errors.forEach(error => { %>
+                    <div class="error-msg">
+                        *<%= error.message%>
+                    </div>
+                <% }) %>
+            <% } %>
             <div>
                 <label for="first_name">First Name*</label>
-                <input type="text" name="first_name" id="first_name" required>
+                <input type="text" name="first_name" id="first_name" >
             </div>
             <div>
                 <label for="last_name">Last Name*</label>
-                <input type="text" name="last_name" id="last_name" required>
+                <input type="text" name="last_name" id="last_name" >
             </div>
             <div>
                 <label for="email">Email</label>
@@ -29,7 +36,7 @@
             </div>
             <div>
                 <label for="phone">Phone*</label>
-                <input type="tel" name="phone" id="phone" required>
+                <input type="tel" name="phone" id="phone" >
             </div>
             <div class="type">
                 <label for="type">What do you want to do?*</label>
@@ -57,7 +64,7 @@
             <div class="cater">
                 <div>
                     <label for="about_cater">Tell us about the catering service you need</label>
-                    <textarea name="about_event" id="about_event" cols="30" rows="10"></textarea>
+                    <textarea name="about_cater" id="about_cater" cols="30" rows="10"></textarea>
                 </div>
                 <div>
                     <label for="budget">Catering Budget</label>
@@ -66,8 +73,8 @@
             </div>
             <div class="video">
                 <div>
-                    <label for="video_event">Tell us about your video production</label>
-                    <textarea name="video_event" id="video_event" cols="30" rows="10"></textarea>
+                    <label for="about_video">Tell us about your video production</label>
+                    <textarea name="about_video" id="about_video" cols="30" rows="10"></textarea>
                 </div>
                 <div>
                     <label for="budget">Tell us about your event</label>
