@@ -7,5 +7,7 @@ router.get('', (req, res) => {
 router.get('/contact', (req, res) => {
     res.status(200).render('contact', {title : "Golden Castle | Contact", errors: ""})
 })
-
+router.get('/contact/success', (req, res) => {
+    res.status(200).render('success', {title : "Golden Castle | Contact Success"})
+})
 module.exports = router

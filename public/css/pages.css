@@ -230,6 +230,7 @@ footer .right a{
     color: var(--gold);
     text-decoration: none;
 }
+/* others */
 
 .error-msg{
     font-family: 'poppins', Helvetica,sans-serif;
@@ -237,6 +238,61 @@ footer .right a{
     font-size: 14px;
     margin-bottom: 2rem;
 }
+
+
+.contact-success{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-block: 7rem;
+}
+
+.contact-success img{
+    background-color: #222222;
+    width: 5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 0 8px #5b5b5b;
+}
+
+.contact-success h2{
+    font-family: 'Lora', serif;
+    font-weight: 300;
+    font-size: 18px;
+    letter-spacing: 0.1rem;
+    text-align: center;
+    text-transform: uppercase;
+    animation: fadeIn 1s ease-in 0s 1;
+}
+
+.contact-success p{
+    font-family: 'poppins', Helvetica,sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    letter-spacing: 0.1rem;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 1rem;
+    animation: fadeIn 1s ease-in 0s 1;
+}
+.contact-success a{
+    font-family: 'Lora', serif;
+    font-weight: 300;
+    font-size: 15px;
+    letter-spacing: 0.1rem;
+    text-align: center;
+    margin-top: 1rem;
+    animation: fadeIn 1s ease-in 0s 1;
+    color: #E6A90B;
+    text-transform: lowercase;
+}
+
+.mini-nav{
+    color: #E6A90B;
+}
+
+
+
 /* contact */
 
 
