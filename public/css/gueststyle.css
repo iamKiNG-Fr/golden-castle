@@ -218,6 +218,7 @@ body{
     z-index: 98;
     background-color: rgba(26, 26, 26, 0.15);
     backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     animation: slideup 0.5s ease-out 0s 1;
 }
 

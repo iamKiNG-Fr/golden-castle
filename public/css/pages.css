@@ -58,6 +58,7 @@ body{
     z-index: 60;
     background-color: rgba(26, 26, 26, 0.15);
     backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     animation: slideup 0.5s ease-out 0s 1;
 }
 
@@ -252,7 +253,9 @@ footer .right a{
     background-color: #222222;
     width: 5rem;
     margin-bottom: 1rem;
-    box-shadow: 0 0 8px #5b5b5b;
+    box-shadow: 0 0 8px #E6A90B;
+    border-radius: 8px;
+    border: solid #E6A90B;
 }
 
 .contact-success h2{
@@ -281,13 +284,19 @@ footer .right a{
     font-size: 15px;
     letter-spacing: 0.1rem;
     text-align: center;
-    margin-top: 1rem;
     animation: fadeIn 1s ease-in 0s 1;
     color: #E6A90B;
     text-transform: lowercase;
+    box-shadow: 0 0 8px #E6A90B;
+    padding: 0.5rem 0.8rem;
+    border-radius: 8px;
+}
+.contact-success a:hover{
+    box-shadow: 0 0 12px #E6A90B;
 }
 
 .mini-nav{
+    margin-top: 2rem;
     color: #E6A90B;
 }
 
