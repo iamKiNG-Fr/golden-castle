@@ -5,6 +5,8 @@
     --black:  rgba(33, 33, 33, 0.741);
     --white: #ffffff;
     --glow-gold: linear-gradient(175deg, rgba(230,169,11,1) 0%, rgba(255,215,0,1) 50%, rgba(230,169,11,1) 100%);
+    --font-lora: 'Lora', serif;
+    --font-poppins: 'poppins', sans-serif;
 }
   
 /* .ft-gold{
@@ -106,6 +108,10 @@
     color: black;
 }
 
+.current{
+    text-decoration: underline #ffd700;
+    text-underline-offset: 10px;
+}
 
 *{
     margin: 0;
@@ -255,7 +261,39 @@ body{
     font-size: 8px;
 }
 
+.nav .center ul{
+    display: flex;
+    list-style-type: none;
+}
+
+.nav .center a{
+    margin-inline: 0.5rem;
+}
+
+.nav .right .nav-cta{
+    background-color: #E6A90B;
+    padding: 0.3rem;
+    border-radius: 4px;
+    color: var(--black);
+    text-transform: capitalize;
+    font-family: 'poppins', sans-serif;
+    letter-spacing: 2;
+    font-weight: 400;
+    font-size: 14px;
+    transition: 500ms ease-in-out;
+}
+
+.nav .right .nav-cta:hover{
+    background-color: #ffd700;
+}
+
+.nav .center a:hover{
+    color: #fff;
+}
+
 .nav .right{
+    display: flex;
+    align-items: center;
     margin-right: 1rem;
 }
 
@@ -873,4 +911,57 @@ footer .right a{
         word-spacing: 0.08rem;
     }
   
+}
+
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+    .nav .center ul{display: none;}
+    .nav a.icon {
+      float: right;
+      display: block;
+      margin-left: 0.5rem;
+    }
+}
+  
+  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+.nav.responsive {
+    position: relative;
+    height: auto;
+    position: fixed;
+}
+.nav.responsive a.icon {
+    position: block;
+    margin-left: 0.5rem;
+}
+
+.nav.responsive .center ul{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    width: 100%;
+    left: 0;
+    top: 75px;
+    text-align: center;
+    background-color: rgba(26, 26, 26, 0.775);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(8px);
+    padding-top: 05px;
+    padding-bottom: 1rem;
+}
+
+.nav.responsive .center li{
+    padding: 0.5rem;
+    font-family: var(--font-poppins);
+    /* border-bottom: 2px solid #6e6e6e40; */
+}
+
+.current{
+    text-decoration: none;
+    /* text-underline-offset: 10px; */
+    border: solid 2px #E6A90B;
+    border-radius: 6px;
+}
 }

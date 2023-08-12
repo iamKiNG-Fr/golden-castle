@@ -8,10 +8,23 @@
             </div>
         </div>
     </a>
+
+    <div class="center">
+        <ul>
+            <li <% if (page_name === 'home') { %>class="current" <% } %>><a href="/" class="nav-home">home</a></li>
+            <li <% if (page_name === 'services') { %>class="current" <% } %>><a href="/services" class="nav-services">services</a></li>
+            <li <% if (page_name === 'contact') { %>class="current" <% } %>><a href="/contact" class="nav-contact">contact</a></li>
+            <li <% if (page_name === 'about') { %>class="current" <% } %>><a href="/about" class="nav-about">about</a></li>
+        </ul>
+    </div>
    
     <div class="right">
         <a href="https://www.instagram.com/golden_castle_event_plus/"><img src="/img/insta.png" alt="nigeria flag"></a>
-        <img src="/img/ng.png" alt="nigeria flag">
+        <!-- <img src="/img/ng.png" alt="nigeria flag"> -->
+        <a href="/contact" class="nav-cta">start here</a>
+        <a href="javascript:void(0);" class="icon">
+            <i class="fa fa-bars"></i>
+        </a>
     </div>
     
 </div>

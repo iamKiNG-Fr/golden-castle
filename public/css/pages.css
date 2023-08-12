@@ -5,6 +5,8 @@
     --black:  rgba(33, 33, 33, 0.741);
     --white: #ffffff;
     --glow-gold: linear-gradient(175deg, rgba(230,169,11,1) 0%, rgba(255,215,0,1) 50%, rgba(230,169,11,1) 100%);
+    --font-lora: 'Lora', serif;
+    --font-poppins: 'poppins', sans-serif;
 }
 
 @keyframes fadeIn {
@@ -35,6 +37,15 @@
     }
 }
 
+@keyframes lineright {
+    0% {
+        text-under: translateY(100%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -45,6 +56,11 @@ body{
     height: 100vh;
     width: 100%;
     position: relative;
+}
+
+.current{
+    text-decoration: underline #ffd700;
+    text-underline-offset: 10px;
 }
 
 /* nav */
@@ -61,6 +77,17 @@ body{
     -webkit-backdrop-filter: blur(8px);
     animation: slideup 0.5s ease-out 0s 1;
 }
+
+/* Add an active class to highlight the current page */
+.nav a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+  
+  /* Hide the link that should open and close the topnav on small screens */
+  .nav .icon {
+    display: none;
+  }
 
 .show{
     display: none;
@@ -95,8 +122,44 @@ body{
     font-size: 8px;
 }
 
+.nav .center ul{
+    display: flex;
+    list-style-type: none;
+}
+
+.nav .center a{
+    margin-inline: 0.5rem;
+}
+
+.nav .center a:hover{
+    color: #ffffff;
+}
+
 .nav .right{
+    display: flex;
+    align-items: center;
     margin-right: 1rem;
+}
+
+.nav .right a{
+    margin-left: 0.5rem;
+}
+
+.nav .right .nav-cta{
+    background-color: #E6A90B;
+    padding: 0.3rem;
+    border-radius: 4px;
+    color: var(--black);
+    text-transform: capitalize;
+    font-family: 'poppins', sans-serif;
+    letter-spacing: 2;
+    font-weight: 400;
+    font-size: 14px;
+    transition: 500ms ease-in-out;
+}
+
+.nav .right .nav-cta:hover{
+    background-color: #ffd700;
 }
 
 .nav .right img{
@@ -106,6 +169,7 @@ body{
 .nav img{
     width: 5rem;
 }
+
 
 /* footer */
 
@@ -454,6 +518,90 @@ form div input, select, textarea{
     background-color: var(--light-gold);
 }
 
+
+/* services-page */
+
+
+.services-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5rem;
+    background:  linear-gradient(rgba(0, 0, 0, 0.713) 0%, rgba(0, 0, 0, 0.064) 10%,  rgba(0, 0, 0, 0) 100%),  url('/img/servicesbg4.jpg');
+    background-size: cover;
+    /* background-color: #4b4b4b; */
+}
+
+.services-page .card{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 15rem;
+    background-color: #ededed;
+    margin: 1rem;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    transition: 500ms ease-in-out;
+}
+
+.services-page .card h2{
+    color: #ffffffda;
+    font-family: var(--font-lora);
+    font-weight: 200;
+    text-align: center;
+    background-color: #E6A90B;
+    padding-inline: 1rem;
+}
+
+.services-page .event{
+    background:  linear-gradient(rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%) ,url('/img/seervice-card5.jpg');
+    background-position: right;
+    background-size: cover;
+}
+.services-page .event:hover{
+    background: linear-gradient(rgba(0, 0, 0, 0.19) 0%, rgba(0, 0, 0, 0.10) 100%) ,url('/img/seervice-card5c.jpg');
+    background-position: right;
+    background-size: cover;
+}
+.services-page .wed{
+    background: linear-gradient(rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%) ,url('/img/seervice-card2.jpg');
+    background-position: right;
+    background-size: cover;
+}
+.services-page .wed:hover{
+    background: linear-gradient(rgba(0, 0, 0, 0.10) 0%, rgba(0, 0, 0, 0.10) 100%) ,url('/img/seervice-card2c.jpg');
+    background-position: right;
+    background-size: cover;
+}
+.services-page .media{
+    background: linear-gradient(rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%) ,url('/img/seervice-card7.jpg');
+    background-position: right;
+    background-size: cover;
+}
+.services-page .media:hover{
+    background: linear-gradient(rgba(0, 0, 0, 0.10) 0%, rgba(0, 0, 0, 0.10) 100%) ,url('/img/seervice-card7c.jpg');
+    background-position: right;
+    background-size: cover;
+}
+.services-page .cat{
+    background: linear-gradient(rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%) ,url('/img/seervice-card6.jpg');
+    background-position: right;
+    background-size: cover;
+}
+.services-page .cat:hover{
+    background: linear-gradient(rgba(0, 0, 0, 0.10) 0%, rgba(0, 0, 0, 0.10) 100%) ,url('/img/seervice-card6c.jpg');
+    background-position: right;
+    background-size: cover;
+}
+
+.services-page .card:hover{
+    box-shadow: 0 0 17px #373737b2;
+}
+
 .video{
     display: none;
 }
@@ -496,4 +644,56 @@ form div input, select, textarea{
         word-spacing: 0.08rem;
     }
   
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+    .nav .center ul{display: none;}
+    .nav a.icon {
+      float: right;
+      display: block;
+    }
+}
+  
+  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+.nav.responsive {
+    position: relative;
+    height: auto;
+    position: fixed;
+}
+.nav.responsive a.icon {
+    position: block;
+    /* right: 12px;
+    top: 35%; */
+}
+
+.nav.responsive .center ul{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    width: 100%;
+    left: 0;
+    top: 75px;
+    text-align: center;
+    background-color: rgba(26, 26, 26, 0.775);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(8px);
+    padding-top: 0;
+    padding-bottom: 1rem;
+}
+
+.nav.responsive .center li{
+    padding: 0.5rem;
+    font-family: var(--font-poppins);
+    /* border-bottom: 2px solid #6e6e6e40; */
+}
+
+.current{
+    text-decoration: none;
+    /* text-underline-offset: 10px; */
+    border: solid 2px #E6A90B;
+    border-radius: 6px;
+}
 }
