@@ -228,6 +228,17 @@ body{
     animation: slideup 0.5s ease-out 0s 1;
 }
 
+/* Add an active class to highlight the current page */
+.nav a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+      
+/* Hide the link that should open and close the topnav on small screens */
+.nav .icon {
+    display: none;
+}
+
 .show{
     display: none;
 }
@@ -264,6 +275,7 @@ body{
 .nav .center ul{
     display: flex;
     list-style-type: none;
+    font-family: var(--font-poppins);
 }
 
 .nav .center a{

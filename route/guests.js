@@ -10,6 +10,21 @@ router.get('/contact', (req, res) => {
 router.get('/services', (req, res) => {
     res.status(200).render('services', {title : "Golden Castle | Services", errors: "", page_name: 'services'})
 })
+router.get('/services/events', (req, res) => {
+    res.status(200).render('servicesEvents', {title : "Golden Castle | Services", errors: "", page_name: 'services'})
+})
+router.get('/services/wedding', (req, res) => {
+    res.status(200).render('services', {title : "Golden Castle | Services", errors: "", page_name: 'services'})
+})
+router.get('/services/media', (req, res) => {
+    res.status(200).render('services', {title : "Golden Castle | Services", errors: "", page_name: 'services'})
+})
+router.get('/services/catering', (req, res) => {
+    res.status(200).render('services', {title : "Golden Castle | Services", errors: "", page_name: 'services'})
+})
+router.get('/services/rentals', (req, res) => {
+    res.status(200).render('services', {title : "Golden Castle | Services", errors: "", page_name: 'services'})
+})
 router.get('/about', (req, res) => {
     res.status(200).render('about', {title : "Golden Castle | About", errors: "", page_name: 'about'})
 })
