@@ -737,9 +737,9 @@ form button{
     text-align: center;
 }
 
-/* .services-pages-body{
-    
-} */
+.services-pages-body{
+    padding: 2rem;
+}
 .services-pages-body section{
     padding-block: 5rem;
 }
@@ -827,7 +827,21 @@ form button{
         font-weight: 300;
         word-spacing: 0.08rem;
     }
-  
+    /* .services-pages-event-head{
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat; }*/
+     .services-pages-event-head, .services-pages-cater-head, .services-pages-media-head, .services-pages-wed-head{
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    .services-page .wed{
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
 }
 
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
