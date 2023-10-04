@@ -21,9 +21,11 @@ const connectDb = async () => {
 //Routers location
 const guestRouters = require('./route/guests')
 const userRouters = require('./route/user')
+const rentRouters = require('./route/rent')
 
 app.use('/',guestRouters)
 app.use('/users',userRouters)
+app.use('/rent',rentRouters)
 
 app.listen(port, async ()=>{
     console.log(`Listening on port ${port}`);

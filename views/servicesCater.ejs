@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/otherhead.ejs') %>
+</head>
+<body>
+    <div class="services-pages">
+        <%- include('./partials/nav.ejs') %>
+        <div class="services-pages-head services-pages-cater-head">
+            <ul class="breadcrumbs">
+                <li><a href="/">Home</a></li>
+                <p> / </p>
+                <li><a href="/services">Services</a></li>
+                <p> / </p>
+                <li class="current_bread"><a href="#">Catering</a></li>
+            </ul>
+            <p>catering</p>
+            <h3>Creating a memorable event begins here.</h3>
+        </div>
+        <div class="services-pages-intro">
+            <h3>Catering Services</h3>
+            <p>Indulge in Culinary delights with Golden Castle's catering services. We offer a delectable range of cuisines to satisfy every palate</p>
+        </div>
+       <div class="services-pages-body">
+        <section >
+            <!-- <section>
+                <h3>Event Catering</h3>
+                <p>Discover how our catering services are tailored to various events, from weddings to corporate gatherings.</p>
+            </section>
+            <h3>Our Menu Options</h3>
+            <p>Explore our diverse menu options, from elegant plated dinners to casual buffets.</p>
+            <div>
+                <h4>Menu Option 1</h4>
+                <p>We'll help you find the perfect backdop for your event.</p>
+            </div>
+            <div>
+                <h4>Menu Option 2</h4>
+                <p>Let your imagination run wild. We'll bring your theme to life</p>
+            </div>
+            <div>
+                <h4>Menu Option 3</h4>
+                <p>Relax and enjoy your event while we handle the details.</p>
+            </div>
+        </section>
+        <section class="testimonial">
+            <h3>Testimonial</h3>
+            <p>Explore some of our recent events and see firsthand how we transform ideas into memorable experience</p>
+        </section> -->
+        <section>
+            <h3>Contact us</h3>
+            <p>Ready to tantalize your taste buds? Contact us for your catering needs.</p>
+            <form action="/users" method="POST">
+                <% if (errors.length > 0){ %>
+                    <% errors.forEach(error => { %>
+                        <div class="error-msg">
+                            *<%= error.message%>
+                        </div>
+                    <% }) %>
+                <% } %>
+                <div>
+                    <label for="first_name">First Name*</label>
+                    <input type="text" name="first_name" id="first_name" >
+                </div>
+                <div>
+                    <label for="last_name">Last Name*</label>
+                    <input type="text" name="last_name" id="last_name" >
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email">
+                </div>
+                <div>
+                    <label for="phone">Phone*</label>
+                    <input type="tel" name="phone" id="phone" >
+                </div>
+                <div class="type">
+                    <label for="type">What do you want to do?*</label>
+                    <select name="type" id="type" required>
+                        <option value="event">Event</option>
+                        <option value="wedding">Wedding</option>
+                        <option value="video">Video Production</option>
+                        <option value="cater" selected>Catering</option>
+                        <option value="enquiry">Enquiry</option>
+                    </select>
+                </div>
+                <div class="event">
+                    <div>
+                        <label for="about_event">Tell us about your event</label>
+                        <textarea name="about_event" id="about_event" cols="30" rows="10"></textarea>
+                    </div>
+                    <div>
+                        <label for="head_count">Number of Expected guests</label>
+                        <input type="text" name="head_count" id="head_count">
+                    </div>
+                    <div>
+                        <label for="budget">Event Budget</label>
+                        <input type="text" name="budget" id="budget">
+                    </div>
+                </div>
+                <div class="cater">
+                    <div>
+                        <label for="about_cater">Tell us about the catering service you need</label>
+                        <textarea name="about_cater" id="about_cater" cols="30" rows="10"></textarea>
+                    </div>
+                    <div>
+                        <label for="budget">Catering Budget</label>
+                        <input type="text" name="budget" id="budget">
+                    </div>
+                </div>
+                <div class="video">
+                    <div>
+                        <label for="about_video">Tell us about your video production</label>
+                        <textarea name="about_video" id="about_video" cols="30" rows="10"></textarea>
+                    </div>
+                    <div>
+                        <label for="budget">Tell us about your event</label>
+                        <input type="text" name="budget" id="budget">
+                    </div>
+                </div>
+                <div class="enquiry">
+                    <div>
+                        <label for="enqiry">Tell us about your event</label>
+                        <textarea name="enquiry" id="enquiry" cols="30" rows="10"></textarea>
+                    </div>
+                </div>
+                <div>
+                    <button type="submit">SEND</button>
+                </div>
+            </form>
+        </section>
+       </div>
+    </div>
+    <%- include('./partials/footer.ejs') %>
+</body>
+</html>

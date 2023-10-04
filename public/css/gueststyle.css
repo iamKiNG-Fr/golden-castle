@@ -276,6 +276,7 @@ body{
     display: flex;
     list-style-type: none;
     font-family: var(--font-poppins);
+    font-size: 14px;
 }
 
 .nav .center a{

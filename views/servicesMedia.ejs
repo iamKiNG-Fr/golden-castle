@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/otherhead.ejs') %>
+</head>
+<body>
+    <div class="services-pages">
+        <%- include('./partials/nav.ejs') %>
+        <div class="services-pages-head services-pages-media-head">
+            <ul class="breadcrumbs">
+                <li><a href="/">Home</a></li>
+                <p> / </p>
+                <li><a href="/services">Services</a></li>
+                <p> / </p>
+                <li class="current_bread"><a href="#">Media</a></li>
+            </ul>
+            <p>Media production</p>
+            <h3>Memorable events, Should be captured.</h3>
+        </div>
+        <div class="services-pages-intro">
+            <h3>Media Production</h3>
+            <p>Golden Castles media production team is here to capture your special moments with precision and artistry. From photography to videography we've got your event covered</p>
+        </div>
+       <div class="services-pages-body">
+        <!-- <section>
+            <h3>Portfolio</h3>
+            <p>Explore some of our recent events and see firsthand how we transform ideas into memorable experience</p>
+        </section>
+        <section>
+            <h3>Client Success stories</h3>
+            <p>Read Stories from clients who trusted us to document their events and create lasting memories</p>
+        </section> -->
+        <section>
+            <h3>Request a Quote</h3>
+            <p>Ready to capture your event's magic on film? Reach out to us for a personalized quote</p>
+            <form action="/users" method="POST">
+                <% if (errors.length > 0){ %>
+                    <% errors.forEach(error => { %>
+                        <div class="error-msg">
+                            *<%= error.message%>
+                        </div>
+                    <% }) %>
+                <% } %>
+                <div>
+                    <label for="first_name">First Name*</label>
+                    <input type="text" name="first_name" id="first_name" >
+                </div>
+                <div>
+                    <label for="last_name">Last Name*</label>
+                    <input type="text" name="last_name" id="last_name" >
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email">
+                </div>
+                <div>
+                    <label for="phone">Phone*</label>
+                    <input type="tel" name="phone" id="phone" >
+                </div>
+                <div class="type">
+                    <label for="type">What do you want to do?*</label>
+                    <select name="type" id="type" required>
+                        <option value="event">Event</option>
+                        <option value="wedding">Wedding</option>
+                        <option value="video" selected>Video Production</option>
+                        <option value="cater">Catering</option>
+                        <option value="enquiry">Enquiry</option>
+                    </select>
+                </div>
+                <div class="event">
+                    <div>
+                        <label for="about_event">Tell us about your event</label>
+                        <textarea name="about_event" id="about_event" cols="30" rows="10"></textarea>
+                    </div>
+                    <div>
+                        <label for="head_count">Number of Expected guests</label>
+                        <input type="text" name="head_count" id="head_count">
+                    </div>
+                    <div>
+                        <label for="budget">Event Budget</label>
+                        <input type="text" name="budget" id="budget">
+                    </div>
+                </div>
+                <div class="cater">
+                    <div>
+                        <label for="about_cater">Tell us about the catering service you need</label>
+                        <textarea name="about_cater" id="about_cater" cols="30" rows="10"></textarea>
+                    </div>
+                    <div>
+                        <label for="budget">Catering Budget</label>
+                        <input type="text" name="budget" id="budget">
+                    </div>
+                </div>
+                <div class="video">
+                    <div>
+                        <label for="about_video">Tell us about your video production</label>
+                        <textarea name="about_video" id="about_video" cols="30" rows="10"></textarea>
+                    </div>
+                    <div>
+                        <label for="budget">What is your budget?</label>
+                        <input type="text" name="budget" id="budget">
+                    </div>
+                </div>
+                <div class="enquiry">
+                    <div>
+                        <label for="enqiry">Tell us about your event</label>
+                        <textarea name="enquiry" id="enquiry" cols="30" rows="10"></textarea>
+                    </div>
+                </div>
+                <div>
+                    <button type="submit">SEND</button>
+                </div>
+            </form>
+        </section>
+       </div>
+    </div>
+    <%- include('./partials/footer.ejs') %>
+</body>
+</html>
